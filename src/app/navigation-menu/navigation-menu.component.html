@@ -1,0 +1,70 @@
+<header class="header-variation-3">
+    <div class="buffer"></div>
+    <div class="holder">
+      <a target="_self">
+          <div id="header-logo">
+              <div></div>
+          </div>
+      </a>
+      <div data-name="header-menu-trigger" ng-click="isMobileMenuVisible = true">
+          <div></div>
+      </div>
+      <div id="header-options" ng-class="{'visible-mobile-menu': isMobileMenuVisible}">
+          <div data-name="header-menu-close" ng-click="isMobileMenuVisible = false">
+              <span>Close Menu</span>
+              <div></div>
+          </div>
+          <!-- <div ng-if="isLoggedIn === false" class="header-option" ng-class="{'selected': location.$$url == '/banking'}">
+              <a target="_self" href="/banking">Banking</a>
+          </div> -->
+          <div ng-if="isLoggedIn === true" class="header-option" ng-class="{'selected': location.$$url == '/banking'}">
+              <a target="_self" href="/account">Account</a>
+          </div>
+          <div ng-if="isLoggedIn === true" class="header-option" ng-class="{'selected': location.$$url == '/banking'}">
+              <a target="_self" href="/sendandpay">Send Money and Pay</a>
+          </div>
+          <div ng-if="isLoggedIn === true" class="header-option" ng-class="{'selected': location.$$url == '/banking'}">
+              <a target="_self" href="/security">Security</a>
+          </div>
+          <div ng-if="isLoggedIn === true || isLoggedIn === false" class="header-option" ng-class="{'selected': location.$$url == '/learnmoney'}">
+              <a target="_self" href="/learnmoney">Learn Money</a>
+          </div>
+          <!-- <div ng-if="isLoggedIn === false" class="header-option" ng-class="{'selected': location.$$url == '/partners'}">
+              <a target="_self" href="/partners">Partners</a>
+          </div> -->
+          <!-- <div ng-if="isLoggedIn === false" class="header-option" ng-class="{'selected': location.$$url == '/whycapway'}">
+              <a target="_self" href="/whycapway">Why CapWay</a>
+          </div>
+          <div ng-if="isLoggedIn === false" class="header-option" ng-class="{'selected': ['/company','/press','/contactus'].indexOf(location.$$url) != -1}">
+              <a target="_self" href="/events">Company</a>
+          </div> -->
+          <div ng-if="isLoggedIn === true" class="header-option" ng-class="{'selected': location.$$url == '/resources'}">
+            <a target="_self" href="/resources">Resources</a>
+        </div>
+        <div ng-if="isLoggedIn === true" class="header-option" ng-class="{'selected': location.$$url == '/banking'}">
+            <a target="_self" href="/help">Help</a>
+        </div>
+          <!-- <div ng-if="isLoggedIn === true" data-page-name="More" class="header-option" ng-class="{'selected': ['/company','/press','/contactus'].indexOf(location.$$url) != -1}">
+              <a target="_self" href="/events">More</a>
+          </div>
+          <div ng-if="isLoggedIn === false" class="header-option">
+              <a target="_self" href="/signin">Sign In</a>
+          </div>
+          <div ng-if="isLoggedIn === false" class="header-option" data-page-name="Join">
+              <a target="_self" href="/join">Sign Up</a>
+          </div> -->
+          <div ng-if="isLoggedIn === true" class="header-option" ng-class="{'selected': location.$$url == '/banking'}">
+              <a target="_self" href="/waitlist">Dummy-Profile</a>
+          </div>
+          <!-- <div ng-if="isLoggedIn === true" class="header-option" data-page-name="User" ng-class="{'selected': location.$$url == '/profile'}">
+              <div>
+                <div class="header-user" ng-click="link('/profile')">
+                    <div ng-if="User.get('picture')" ng-style="{'background-image': 'url('+User.get('picture')+')'}"></div>
+                    <div ng-if="!User.get('picture')"></div>
+                    <span ng-bind="User.get('name')"></span>
+                </div>
+              </div>
+          </div> -->
+      </div>
+    </div>
+</header>

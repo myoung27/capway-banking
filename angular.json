@@ -120,6 +120,12 @@
           }
         }
       }
-    }},
-  "defaultProject": "capway-banking"
+    }
+  },
+  "defaultProject": "capway-banking",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
