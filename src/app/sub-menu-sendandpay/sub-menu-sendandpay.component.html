@@ -1,1 +1,19 @@
-<p>sub-menu-sendandpay works!</p>
+<div class="sub-menu">
+<div class="holder">
+  <div class="links">
+    <div ng-if="isLoggedIn === true" class="header-option" ng-class="{'selected': location.$$url == '/account'}">
+      <a target="_self" href="sendandpay/send">Send Money</a>
+    </div>
+    <div ng-if="isLoggedIn === true" class="header-option" ng-class="{'selected': location.$$url == '/banking'}">
+      <a target="_self" href="sendandpay/request">Request Money</a>
+    </div>
+    <div ng-if="isLoggedIn === true" class="header-option" ng-class="{'selected': location.$$url == '/banking'}">
+      <a target="_self" href="sendandpay/billpay">Bill Pay</a>
+    </div>
+    <div ng-if="isLoggedIn === true || isLoggedIn === false" class="header-option" ng-class="{'selected': location.$$url == '/learnmoney'}">
+      <a target="_self" href="sendandpay/transferhistory">Transfer History</a>
+    </div>
+  </div>
+</div>
+</div>
+<router-outlet></router-outlet>

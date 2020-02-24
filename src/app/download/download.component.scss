@@ -1,0 +1,108 @@
+@import 'src/styles.scss';
+
+section[data-name="downloadcapway"] {
+  background-color: #e0f8ff;
+  padding: 4rem 0;
+  border: 1px solid black;
+
+  .holder {
+    max-width: 60rem;
+    margin: 0 auto;
+
+    h3 {
+      text-align: center;
+      font-family: "sofia-pro-regular";
+      font-size: 1.6rem;
+      color: #4A4A4A;
+    }
+
+    .app-options {
+      display: flex;
+      margin: 0 auto;
+      justify-content: space-evenly;
+      position: relative;
+      max-width: 30rem;
+      margin-bottom: 3rem;
+
+      .option {
+        display: flex;
+        justify-content: space-around;
+
+        #icon {
+          background-image: url("src/assets/images/downloads/check-blue.svg");
+          width: 2rem;
+          height: 1.7rem;
+          margin: 0 auto;
+          background-position: center center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-repeat: no-repeat;
+          margin: 0rem 0.5rem 2rem auto;
+        }
+
+        p {
+          max-width: 35rem;
+          line-height: 1.5;
+          color: #4A4A4A;
+          font-family: "sofia-pro-regular";
+          text-align: center;
+          font-size: 1rem;
+          margin: 0 auto 2rem;
+          @media (max-width: $tablet) {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+
+    h2 {
+      color: #005D7A;
+      font-family: "sofia-pro-medium";
+      text-align: center;
+      font-size: 2.3rem;
+      margin: 0 auto 0.3rem;
+      @media (max-width: $tablet) {
+        font-size: 1.5rem;
+      }
+    }
+
+    p {
+      max-width: 35rem;
+      line-height: 1.5;
+      color: #0084AD;
+      font-family: "sofia-pro-light";
+      text-align: center;
+      font-size: 1.5rem;
+      margin: 0 auto 0rem;
+      @media (max-width: $tablet) {
+        font-size: 1rem;
+      }
+    }
+
+    div[data-name="download-buttons"] {
+      text-align: center;
+
+      a {
+        text-decoration: none;
+        display: inline-block;
+        margin: 2rem;
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 13rem;
+        height: 4rem;
+        padding: 0 2rem;
+        box-sizing: border-box;
+        border-radius: 0.3rem;
+
+        &:nth-child(1) {
+          background-image: url("src/assets/images/downloads/apple-store.svg");
+        }
+
+        &:nth-child(2) {
+          background-image: url("src/assets/images/downloads/google-play.svg");
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,23 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~normalize.css';
+
+@font-face {
+  font-family: "sofia-pro-regular";
+  src: url("src/assets/fonts/sofia/Sofia-Pro-Regular.otf");
+}
+@font-face {
+  font-family: "sofia-pro-light";
+  src: url("src/assets/fonts/sofia/Sofia-Pro-Light.otf");
+}
+@font-face {
+  font-family: "sofia-pro-medium";
+  src: url("src/assets/fonts/sofia/Sofia-Pro-Medium.otf");
+}
+@font-face {
+  font-family: "sofia-pro-bold";
+  src: url("src/assets/fonts/sofia/Sofia-Pro-Bold.otf");
+}
+
 $tablet: 64em;
 $mobile: 60em;
 $mobileHeight: 40em;

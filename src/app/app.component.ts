@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router, Event, NavigationStart } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,24 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'capway-banking';
+
+
+
+  constructor(private router: Router){
+
+    this.router.events.subscribe( (v: Event) => {
+     console.log(v);
+   });
+ }
+ ngOnInit() {
+
+  }
+
+  onRouterOutletActivate() {
+
+  }
+
+  onRouterOutletDeactivate() {
+
+  }
 }

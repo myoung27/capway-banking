@@ -1,0 +1,207 @@
+@import 'src/styles.scss';
+
+footer[data-name="footer-variation-2"] {
+  background-color: #245d7a;
+  text-align: center;
+  clear: both;
+  text-align: left;
+  position: relative;
+  z-index: 5;
+
+  ul {
+    padding-left: 0rem;
+}
+
+  .holder {
+    width: 95%;
+    margin: 0 auto;
+    max-width: 70rem;
+    display: flex;
+    position: relative;
+    @media (max-width: $mobile) {
+      width: 84%;
+      flex-direction: column;
+      }
+  }
+
+  .top {
+    padding: 4rem 0 2rem 0;
+
+    .social{
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer-logo {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-image: url("src/assets/images/footer/capway-logo-color.svg");
+      background-size: contain;
+      width: 12.5rem;
+      height: 2rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+      vertical-align: top;
+
+      @media (max-width: $tablet) {
+        position: relative;
+        display: block;
+        margin: 0 auto 3rem auto;
+      }
+
+    }
+    div[data-name="Facebook"] {
+      width: 1.5rem;
+      height: 1.5rem;
+      display: inline-block;
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url("src/assets/images/footer/facebook.png");
+      vertical-align: middle;
+    }
+    div[data-name="Instagram"] {
+      width: 1.5rem;
+      height: 1.5rem;
+      display: inline-block;
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url("src/assets/images/footer/instagram.svg");
+      vertical-align: middle;
+    }
+    div[data-name="Twitter"] {
+      width: 1.5rem;
+      height: 1.5rem;
+      display: inline-block;
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url("src/assets/images/footer/twitter.svg");
+      vertical-align: middle;
+    }
+    div[data-name="YouTube"] {
+      width: 1.5rem;
+      height: 1.5rem;
+      display: inline-block;
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url("src/assets/images/footer/youtube.png");
+      vertical-align: middle;
+      margin: 0 0.3rem 0 0;
+      position: relative;
+      top: -0.1rem;
+    }
+    div[data-name="LinkedIn"] {
+      width: 1.5rem;
+      height: 1.5rem;
+      display: inline-block;
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url("src/assets/images/footer/linkedin.png");
+      vertical-align: middle;
+      margin: 0 0.3rem 0 0;
+      position: relative;
+      top: -0.1rem;
+    }
+
+    .sections {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 3rem;
+
+      @media (max-width: $tablet) {
+        display: block;
+        margin: 0;
+      }
+
+      .section {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0 1rem 2rem 1rem;
+        @media (max-width: $tablet) {
+          margin: 0 2rem 2rem 2rem;
+        }
+        strong {
+          color: #FFFFFF;
+          font-family: "sofia-pro-regular";
+          margin: 0 0 1rem 0;
+          display: block;
+        }
+        ul {
+          li {
+            list-style-type: none;
+            a {
+              text-decoration: none;
+              color: rgba(255,255,255,0.9);
+              margin: 0 0 0.5rem 0;
+              display: block;
+              font-family: "sofia-pro-light";
+              font-size: 0.95rem;
+              vertical-align: middle;
+              &:hover {
+                color: #FFFFFF;
+              }
+            }
+            div[data-name="Facebook"] {
+              width: 1rem;
+              height: 1rem;
+              display: inline-block;
+              background-position: center center;
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-image: url("src/assets/images/footer/facebook.svg");
+              vertical-align: middle;
+            }
+            div[data-name="Instagram"] {
+              width: 1rem;
+              height: 1rem;
+              display: inline-block;
+              background-position: center center;
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-image: url("src/assets/images/footer/instagram.svg");
+              vertical-align: middle;
+            }
+            div[data-name="Twitter"] {
+              width: 1rem;
+              height: 1rem;
+              display: inline-block;
+              background-position: center center;
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-image: url("src/assets/images/footer/twitter.svg");
+              vertical-align: middle;
+            }
+            div[data-name="YouTube"] {
+              width: 1rem;
+              height: 1rem;
+              display: inline-block;
+              background-position: center center;
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-image: url("src/assets/images/footer/youtube.png");
+              vertical-align: middle;
+              margin: 0 0.3rem 0 0;
+              position: relative;
+              top: -0.1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .bottom {
+    background-color: #113647;
+    box-sizing: border-box;
+    padding: 1rem 0;
+    color: #FFFFFF;
+    font-size: 0.9rem;
+    @media (max-width: $tablet) {
+      text-align: center;
+    }
+  }
+}

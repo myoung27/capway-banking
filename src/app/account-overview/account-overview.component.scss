@@ -1,0 +1,65 @@
+@import 'src/styles.scss';
+
+.holder{
+  max-width: 60rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  .left{
+    display: flex;
+    justify-content: space-between;
+    width: 52rem;
+
+    .accountTotal{
+      display: flex;
+      flex-direction: column;
+    }
+    .card{
+      display: flex;
+      flex-direction: column;
+      padding-left: 20rem;
+    }
+
+  }
+  .right{
+    .debit{
+      border: 1px solid black;
+      border-radius: .5rem;
+      background-color: black;
+    box-sizing: border-box;
+    padding: 1rem 0.5rem;
+    margin: 1rem;
+    width: 15rem;
+      .logoLine{
+        display: flex;
+        justify-content: space-between;
+        .chip{
+          width: 2.5rem;
+          height: 2.5rem;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-image: url("src/assets/images/banking/chip.png");
+
+        }
+        .logo{
+          width: 7.5rem;
+          height: 2.5rem;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          background-image: url("src/assets/images/banking/capway-logo-color.svg");
+        }
+
+
+      }
+      h3,h4,h5{
+        font-family: sofia-pro-regular;
+        color: #00ace2;
+        margin: .5rem auto 0;
+      }
+    }
+
+  }
+}

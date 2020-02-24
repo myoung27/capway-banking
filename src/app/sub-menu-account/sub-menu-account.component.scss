@@ -1,0 +1,67 @@
+@import 'src/styles.scss';
+
+.sub-menu{
+  border: 1px solid black;
+  background-color: white;
+
+.holder {
+  width: 95%;
+  margin: 0 auto;
+  max-width: 64rem;
+  position: relative;
+  height: inherit;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+  @media (min-width: $maxDesktop) {
+      max-width: 60rem;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+    width: 30rem;
+
+    a{
+      color: #4A4A4A;
+      text-decoration: none;
+      display: block;
+      position: relative;
+      cursor: pointer;
+      font-size: 0.95rem;
+      font-family: "sofia-pro-regular";
+
+      & > div:not(.dropdown):not(.header-user) {
+        width: 3rem;
+        height: 0.1rem;
+        background-color: #FFFFFF;
+        border-radius: 0.1rem;
+        position: absolute;
+        top: 1.5rem;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      &:hover {
+        color: #00ACE2;
+        span {
+          opacity: 0.7;
+          transition: opacity 0.3s ease;
+        }
+
+        & > div:not(.dropdown):not(.header-user) {
+          opacity: 1;
+          transition: opacity 0.3s ease;
+        }
+      }
+      @media (min-width: $mobile) {
+        &.outline {
+          border: 0.09rem solid #FFFFFF;
+          padding: 0.5rem 1.5rem;
+          border-radius: 1rem;
+        }
+      }
+    }
+  }
+}
+}
