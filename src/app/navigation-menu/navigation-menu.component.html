@@ -18,10 +18,10 @@
               <a target="_self" href="/banking">Banking</a>
           </div> -->
       <div ng-if="isLoggedIn === true" class="header-option" ng-class="{'selected': location.$$url == '/account'}">
-        <a [routerLink]="['account/transactions']" >Account</a>
+        <a [routerLink]="['account/transactions/all-transactions']" >Account</a>
       </div>
       <div ng-if="isLoggedIn === true" class="header-option" ng-class="{'selected': location.$$url == '/banking'}">
-        <a target="_self" href="sendandpay/send">Send Money and Pay</a>
+        <a target="_self" href="sendandpay/send/capway">Send Money and Pay</a>
       </div>
       <div ng-if="isLoggedIn === true" class="header-option" ng-class="{'selected': location.$$url == '/banking'}">
         <a target="_self" href="security/cardsecurity">Security</a>

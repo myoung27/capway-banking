@@ -2,19 +2,19 @@
 <div class="holder">
   <div class="links">
     <div ng-if="isLoggedIn === true" class="header-option" ng-class="{'selected': location.$$url == '/account'}">
-      <a target="_self" href="account/transactions">Transactions</a>
+      <a [routerLink]="['transactions/all-transactions']">Transactions</a>
     </div>
     <div ng-if="isLoggedIn === true" class="header-option" ng-class="{'selected': location.$$url == '/banking'}">
-      <a target="_self" href="account/goals">Goals</a>
+      <a [routerLink]="['goals']">Goals</a>
     </div>
     <div ng-if="isLoggedIn === true" class="header-option" ng-class="{'selected': location.$$url == '/banking'}">
-      <a target="_self" href="account/statements">Statements</a>
+      <a [routerLink]="['statements']">Statements</a>
     </div>
     <div ng-if="isLoggedIn === true || isLoggedIn === false" class="header-option" ng-class="{'selected': location.$$url == '/learnmoney'}">
-      <a target="_self" href="account/security">Security</a>
+      <a [routerLink]="['security']">Security</a>
     </div>
     <div ng-if="isLoggedIn === true || isLoggedIn === false" class="header-option" ng-class="{'selected': location.$$url == '/learnmoney'}">
-      <a target="_self" href="account/settings">Settings</a>
+      <a [routerLink]="['settings']">Settings</a>
     </div>
   </div>
 </div>

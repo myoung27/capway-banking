@@ -17,6 +17,9 @@ import { AccountGoalsComponent } from './account-goals/account-goals.component';
 import { AccountStatementsComponent } from './account-statements/account-statements.component';
 import { AccountSecurityComponent } from './account-security/account-security.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
+import { AccountDepositsComponent } from './account-deposits/account-deposits.component';
+import { AccountWithdrawlsComponent } from './account-withdrawls/account-withdrawls.component';
+import { AccountAllTransactionsComponent } from './account-all-transactions/account-all-transactions.component';
 import { SendandpaySendComponent } from './sendandpay-send/sendandpay-send.component';
 import { SendandpayRequestComponent } from './sendandpay-request/sendandpay-request.component';
 import { SendandpayBillpayComponent } from './sendandpay-billpay/sendandpay-billpay.component';
@@ -26,6 +29,8 @@ import { SecurityCardsecurityComponent } from './security-cardsecurity/security-
 import { SecurityDisputeComponent } from './security-dispute/security-dispute.component';
 import { SecurityAccountsecurityComponent } from './security-accountsecurity/security-accountsecurity.component';
 import { SecurityDisputehistoryComponent } from './security-disputehistory/security-disputehistory.component';
+import { SendandpayRequestCapwayComponent } from './sendandpay-request-capway/sendandpay-request-capway.component';
+import { SendandpayRequestNoncapwayComponent } from './sendandpay-request-noncapway/sendandpay-request-noncapway.component';
 
 
 @NgModule({
@@ -39,10 +44,13 @@ import { SecurityDisputehistoryComponent } from './security-disputehistory/secur
     SubMenuSecurityComponent,
     AccountOverviewComponent,
     AccountTransactionsComponent,
+    AccountAllTransactionsComponent,
     AccountGoalsComponent,
     AccountStatementsComponent,
     AccountSecurityComponent,
     AccountSettingsComponent,
+    AccountWithdrawlsComponent,
+    AccountDepositsComponent,
     SendandpaySendComponent,
     SendandpayRequestComponent,
     SendandpayBillpayComponent,
@@ -51,7 +59,9 @@ import { SecurityDisputehistoryComponent } from './security-disputehistory/secur
     SecurityCardsecurityComponent,
     SecurityDisputeComponent,
     SecurityAccountsecurityComponent,
-    SecurityDisputehistoryComponent
+    SecurityDisputehistoryComponent,
+    SendandpayRequestCapwayComponent,
+    SendandpayRequestNoncapwayComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +71,14 @@ import { SecurityDisputehistoryComponent } from './security-disputehistory/secur
       { path:'account',
         component: SubMenuAccountComponent,
         children:[
-          { path: 'transactions', component: AccountTransactionsComponent },
+          { path: 'transactions',
+            component: AccountTransactionsComponent,
+            children:[
+              { path: 'all-transactions', component: AccountAllTransactionsComponent },
+              { path: 'deposits', component: AccountDepositsComponent },
+              { path:'withdrawls', component: AccountWithdrawlsComponent },
+            ]
+        },
           { path: 'goals', component: AccountGoalsComponent },
           { path:'statements', component: AccountStatementsComponent },
           { path:'security', component: AccountSecurityComponent },
@@ -71,7 +88,13 @@ import { SecurityDisputehistoryComponent } from './security-disputehistory/secur
       { path:'sendandpay',
       component: SubMenuSendandpayComponent,
         children:[
-          { path:'send', component: SendandpaySendComponent },
+          { path:'send',
+            component: SendandpaySendComponent,
+            children: [
+              { path:'capway', component: SendandpayRequestCapwayComponent },
+              { path:'noncapway', component: SendandpayRequestNoncapwayComponent },
+            ]
+           },
           { path:'request', component: SendandpayRequestComponent },
           { path:'billpay', component: SendandpayBillpayComponent },
           { path:'transferhistory', component: SendandpayTransferhistoryComponent },

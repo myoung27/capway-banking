@@ -1,0 +1,95 @@
+@import 'src/styles.scss';
+
+.holder {
+  max-width: 60rem;
+  padding-top: 1rem;
+  margin: auto;
+  font-family: sofia-pro-regular;
+
+  p {
+    text-align: center;
+
+    margin: 0 auto;
+  }
+
+    .all-accounts {
+      display: flex;
+      display: flex;
+      flex-direction: column;
+      border: 1px solid lightgray;
+      border-radius: 0.3rem;
+      box-sizing: border-box;
+      padding: 1rem;
+      width: 29rem;
+      margin: 3rem auto;
+      .transfers {
+
+        .account {
+          .title {
+            p {
+              text-align: left;
+    font-size: 0.8rem;
+    color: #4A4A4A;
+    padding-bottom: 0.6rem;
+    padding-top: 2rem;
+            }
+          }
+
+          input {
+            width: 26.7rem;
+            height: 2rem;
+            padding-bottom: 0;
+            border-radius: 0.3rem;
+            box-shadow: none;
+            border: 1px solid lightgray;
+          }
+          button {
+            background-color: #00ACE2;
+            display: block;
+            width: 20rem;
+            padding: 1.1rem 3rem;
+            box-sizing: border-box;
+            border-radius: 0.5rem;
+            color: #FFFFFF;
+            text-decoration: none;
+            text-align: center;
+            margin: 2rem auto;
+          }
+        }
+      }
+      .transfer-amount {
+
+
+        .transfer {
+          margin: 0 auto;
+          width: 20rem;
+
+          p {
+            text-align: left;
+            padding: 1rem 0;
+            font-size: 0.9rem;
+          }
+
+          input {
+            width: 18rem;
+            height: 2rem;
+            padding-bottom: 0;
+            border-radius: 0.3rem;
+          }
+
+          button {
+            background-color: #00ACE2;
+            display: block;
+            max-width: 20rem;
+            padding: 1.1rem 3rem;
+            box-sizing: border-box;
+            border-radius: 0.5rem;
+            color: #FFFFFF;
+            text-decoration: none;
+            text-align: center;
+            margin: 2rem auto;
+          }
+        }
+      }
+    }
+  }
