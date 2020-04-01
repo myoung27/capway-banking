@@ -1,0 +1,67 @@
+@import 'src/styles.scss';
+
+.holder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 60rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  margin: auto;
+  font-family: sofia-pro-regular;
+  .left {
+    #icon {
+      background-image: url("src/assets/images/dispute/dispute.svg");
+      width: 12.5rem;
+      height: 11.125rem;
+      margin: 0 auto;
+      background-position: center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-repeat: no-repeat;
+      margin: 0 0.5rem 2rem auto;
+    }
+  }
+
+  .right {
+    h1 {
+      font-size: 2em;
+      font-family: sofia-pro-light;
+      color: #005D7A;
+      margin: auto;
+    }
+    h3{
+      color: #0084AD;
+      width: 30rem;
+      font-family: sofia-pro-light;
+    }
+
+    div[data-name="download-buttons"] {
+      text-align: left;
+
+      a {
+        text-decoration: none;
+        display: inline-block;
+        margin: 2rem 2rem 0 0;
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 13rem;
+        height: 4rem;
+        padding: 0 2rem;
+        box-sizing: border-box;
+        border-radius: 0.3rem;
+
+        &:nth-child(1) {
+          background-image: url("src/assets/images/downloads/apple-store.svg");
+        }
+
+        &:nth-child(2) {
+          background-image: url("src/assets/images/downloads/google-play.svg");
+        }
+      }
+    }
+  }
+
+
+}

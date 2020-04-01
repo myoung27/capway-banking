@@ -29,8 +29,11 @@ import { SecurityCardsecurityComponent } from './security-cardsecurity/security-
 import { SecurityDisputeComponent } from './security-dispute/security-dispute.component';
 import { SecurityAccountsecurityComponent } from './security-accountsecurity/security-accountsecurity.component';
 import { SecurityDisputehistoryComponent } from './security-disputehistory/security-disputehistory.component';
-import { SendandpayRequestCapwayComponent } from './sendandpay-request-capway/sendandpay-request-capway.component';
-import { SendandpayRequestNoncapwayComponent } from './sendandpay-request-noncapway/sendandpay-request-noncapway.component';
+import { SendandpaySendCapwayComponent } from './sendandpay-send-capway/sendandpay-send-capway.component';
+import { SendandpaySendNoncapwayComponent } from './sendandpay-send-noncapway/sendandpay-send-noncapway.component';
+import { SecurityDisputeTransactionComponent } from './security-dispute-transaction/security-dispute-transaction.component';
+import { SecurityDisputeReasonComponent } from './security-dispute-reason/security-dispute-reason.component';
+import { SecurityDisputeDetailsComponent } from './security-dispute-details/security-dispute-details.component';
 
 
 @NgModule({
@@ -60,8 +63,11 @@ import { SendandpayRequestNoncapwayComponent } from './sendandpay-request-noncap
     SecurityDisputeComponent,
     SecurityAccountsecurityComponent,
     SecurityDisputehistoryComponent,
-    SendandpayRequestCapwayComponent,
-    SendandpayRequestNoncapwayComponent
+    SendandpaySendCapwayComponent,
+    SendandpaySendNoncapwayComponent,
+    SecurityDisputeTransactionComponent,
+    SecurityDisputeReasonComponent,
+    SecurityDisputeDetailsComponent
   ],
   imports: [
     BrowserModule,
@@ -91,8 +97,8 @@ import { SendandpayRequestNoncapwayComponent } from './sendandpay-request-noncap
           { path:'send',
             component: SendandpaySendComponent,
             children: [
-              { path:'capway', component: SendandpayRequestCapwayComponent },
-              { path:'noncapway', component: SendandpayRequestNoncapwayComponent },
+              { path:'capway', component: SendandpaySendCapwayComponent },
+              { path:'noncapway', component: SendandpaySendNoncapwayComponent },
             ]
            },
           { path:'request', component: SendandpayRequestComponent },
@@ -104,7 +110,14 @@ import { SendandpayRequestNoncapwayComponent } from './sendandpay-request-noncap
       component: SubMenuSecurityComponent,
         children:[
           { path:'cardsecurity', component: SecurityCardsecurityComponent },
-          { path:'dispute', component: SecurityDisputeComponent },
+          { path:'dispute',
+            component: SecurityDisputeComponent,
+            children: [
+              { path:'transaction', component: SecurityDisputeTransactionComponent },
+              { path:'reason', component: SecurityDisputeReasonComponent },
+              { path:'details', component: SecurityDisputeDetailsComponent },
+            ]
+           },
           { path:'accountsecurity', component: SecurityAccountsecurityComponent }
         ]
       },

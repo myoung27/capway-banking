@@ -1,0 +1,51 @@
+@import 'src/styles.scss';
+
+.holder {
+  max-width: 60rem;
+  padding-top: 5rem;
+  margin: auto;
+  font-family: sofia-pro-regular;
+  h1{
+    color: #005D7A;
+    text-align: center;
+  }
+  .transactions{
+    border: 1px solid lightgray;
+    border-radius: .3rem;
+    margin: 1rem;
+    padding:1rem;
+    .transaction{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width:55rem;
+      .user{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 9rem;
+        .user-image{
+          background-image: url("src/assets/images/app-only/request.svg");
+          width: 3rem;
+          height: 2rem;
+          margin: 0 auto;
+          background-position: center center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-repeat: no-repeat;
+        }
+      }
+      .date{
+        display: flex;
+        justify-content: space-between;
+        width: 12rem;
+        font-size: 0.7rem;
+        color: #9b9b9b;
+      }
+      a{
+        text-decoration: none;
+        color: #00ACE2;
+      }
+    }
+  }
+}
